@@ -47,6 +47,7 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
 
     implementation(libs.moshi)
+    implementation(libs.moshiAdapters)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

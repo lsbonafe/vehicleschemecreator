@@ -1,6 +1,7 @@
 package com.anatideo.vehicleschemegenerator.domain
 
+import com.anatideo.vehicleschemegenerator.data.model.VehicleScheme
+
 interface VehicleSchemeRepository {
-    // TODO must use a proper domain model
-    fun getVehicleScheme(): Any
+    fun getVehicleScheme(): VehicleScheme // TODO must use a proper domain model
 }
