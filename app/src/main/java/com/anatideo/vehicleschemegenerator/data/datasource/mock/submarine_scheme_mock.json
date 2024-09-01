@@ -1,0 +1,184 @@
+{
+  "vehicleScheme": {
+    "vehicleType": "submarine",
+    "decks": [
+      {
+        "baseDeckLevel": 2,
+        "levels": [
+          {
+            "columns": 3,
+            "rows": 2,
+            "slots": [
+              {
+                "type": "element",
+                "row": 0,
+                "column": 0,
+                "contentDescription": "Control Panel",
+                "icon": "🎛️"
+              },
+              {
+                "type": "element",
+                "row": 0,
+                "column": 1,
+                "contentDescription": "Gap",
+                "icon": "⬜"
+              },
+              {
+                "type": "element",
+                "row": 0,
+                "column": 2,
+                "contentDescription": "Control Panel",
+                "icon": "🎛️"
+              },
+              {
+                "type": "element",
+                "row": 1,
+                "column": 0,
+                "contentDescription": "Gap",
+                "icon": "⬜"
+              },
+              {
+                "type": "element",
+                "row": 1,
+                "column": 1,
+                "contentDescription": "Gap",
+                "icon": "⬜"
+              },
+              {
+                "type": "element",
+                "row": 1,
+                "column": 2,
+                "contentDescription": "Gap",
+                "icon": "⬜"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "baseDeckLevel": 1,
+        "levels": [
+          {
+            "columns": 3,
+            "rows": 2,
+            "slots": [
+              {
+                "type": "seat",
+                "row": 0,
+                "column": 0,
+                "seatInfo": "Seat 1",
+                "isTaken": false,
+                "category": "premium",
+                "color": "#FFD700",
+                "icon": "🪑"
+              },
+              {
+                "type": "seat",
+                "row": 0,
+                "column": 1,
+                "seatInfo": "Seat 2",
+                "isTaken": false,
+                "category": "premium",
+                "color": "#FFD700",
+                "icon": "🪑"
+              },
+              {
+                "type": "seat",
+                "row": 0,
+                "column": 2,
+                "seatInfo": "Seat 3",
+                "isTaken": false,
+                "category": "premium",
+                "color": "#FFD700",
+                "icon": "🪑"
+              },
+              {
+                "type": "seat",
+                "row": 1,
+                "column": 0,
+                "seatInfo": "Seat 4",
+                "isTaken": false,
+                "category": "premium",
+                "color": "#FFD700",
+                "icon": "🪑"
+              },
+              {
+                "type": "seat",
+                "row": 1,
+                "column": 1,
+                "seatInfo": "Seat 5",
+                "isTaken": false,
+                "category": "premium",
+                "color": "#FFD700",
+                "icon": "🪑"
+              },
+              {
+                "type": "seat",
+                "row": 1,
+                "column": 2,
+                "seatInfo": "Seat 6",
+                "isTaken": false,
+                "category": "premium",
+                "color": "#FFD700",
+                "icon": "🪑"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "baseDeckLevel": 0,
+        "levels": [
+          {
+            "columns": 3,
+            "rows": 2,
+            "slots": [
+              {
+                "type": "element",
+                "row": 0,
+                "column": 0,
+                "contentDescription": "Window with Fish",
+                "icon": "🐟"
+              },
+              {
+                "type": "element",
+                "row": 0,
+                "column": 1,
+                "contentDescription": "Window with Fish",
+                "icon": "🐠"
+              },
+              {
+                "type": "element",
+                "row": 0,
+                "column": 2,
+                "contentDescription": "Window with Fish",
+                "icon": "🐡"
+              },
+              {
+                "type": "element",
+                "row": 1,
+                "column": 0,
+                "contentDescription": "Window with Fish",
+                "icon": "🐟"
+              },
+              {
+                "type": "element",
+                "row": 1,
+                "column": 1,
+                "contentDescription": "Window with Fish",
+                "icon": "🐠"
+              },
+              {
+                "type": "element",
+                "row": 1,
+                "column": 2,
+                "contentDescription": "Window with Fish",
+                "icon": "🐡"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
