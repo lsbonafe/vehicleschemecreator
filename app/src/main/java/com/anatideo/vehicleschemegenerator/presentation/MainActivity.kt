@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     fun printVehicleSchemeArt() {
         val vehicleSchemeMockDataSourceImpl = VehicleSchemeMockDataSourceImpl(
-            context = this,
+            assetManager = assets,
             gsonBuilder = GsonBuilder()
         )
         val repository = GetVehicleSchemeRepositoryImpl(vehicleSchemeMockDataSourceImpl)

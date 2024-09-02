@@ -1,6 +1,6 @@
 package com.anatideo.vehicleschemegenerator.data.datasource.mock
 
-import android.content.Context
+import android.content.res.AssetManager
 import androidx.annotation.VisibleForTesting
 import com.anatideo.vehicleschemegenerator.data.datasource.VehicleSchemeDataSource
 import com.anatideo.vehicleschemegenerator.data.model.Slot
@@ -14,20 +14,20 @@ import java.lang.reflect.Type
 
 class VehicleSchemeMockDataSourceImpl(
     private val gsonBuilder: GsonBuilder,
-    private val context: Context
+    private val assetManager: AssetManager
 ) : VehicleSchemeDataSource {
     override fun getVehicleScheme(): VehicleScheme {
         val gson = gsonBuilder
             .registerTypeAdapter(Slot::class.java, SlotDeserializer())
             .create()
 
-        return readJsonFromAssets(context, "train_scheme_mock.json")
+        return readJsonFromAssets("train_scheme_mock.json")
             .let { gson.fromJson(it, VehicleScheme::class.java) }
     }
 
     @VisibleForTesting
-    fun readJsonFromAssets(context: Context, fileName: String): String {
-        return context.assets.open(fileName).bufferedReader().use { it.readText() }
+    fun readJsonFromAssets(fileName: String): String {
+        return assetManager.open(fileName).bufferedReader().use { it.readText() }
     }
 
     @VisibleForTesting
