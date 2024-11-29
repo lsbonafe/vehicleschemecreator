@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Bus Scheme Generator"
+rootProject.name = "Vehicle Scheme Generator"
 include(":app")
