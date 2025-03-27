@@ -27,7 +27,8 @@ sealed class Slot {
         @SerializedName("isTaken") val isTaken: Boolean,
         @SerializedName("category") val category: String?,
         @SerializedName("color") val color: String,
-        @SerializedName("icon") val icon: String
+        @SerializedName("icon") val icon: String,
+        @SerializedName("price") val price: Double?
     ) : Slot()
 
     data class Element(

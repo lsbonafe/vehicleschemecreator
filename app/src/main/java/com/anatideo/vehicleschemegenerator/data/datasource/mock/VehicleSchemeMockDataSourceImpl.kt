@@ -21,7 +21,7 @@ class VehicleSchemeMockDataSourceImpl(
             .registerTypeAdapter(Slot::class.java, SlotDeserializer())
             .create()
 
-        return readJsonFromAssets("train_scheme_mock.json")
+        return readJsonFromAssets("rocket_scheme_mock.json")
             .let { gson.fromJson(it, VehicleScheme::class.java) }
     }
 
