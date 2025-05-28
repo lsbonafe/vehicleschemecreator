@@ -1,4 +1,4 @@
-package com.anatideo.vehicleschemegenerator.presentation.composable.theme
+package com.anatideo.vehicleschemegenerator.presentation.theme
 
 import android.app.Activity
 import android.os.Build
