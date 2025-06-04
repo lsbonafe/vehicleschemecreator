@@ -19,7 +19,7 @@ A simple example is shown below.
             {
               "type": "element",
               "row": 0,
-              "column": 0,![Uploading ChatGPT Image May 28 2025 from Steve Jobs Reflexivo.png…]()
+              "column": 0,
 
               "contentDescription": "Wheel",
               "icon": "⚙️"
