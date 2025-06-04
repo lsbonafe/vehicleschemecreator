@@ -3,7 +3,7 @@ A renderer for generic JSON structures representing vehicle schemes—ranging fr
 
 The vehicle scheme data model is flexible and supports various vertical and horizontal configurations, with multiple decks and levels.
 
-A simple example is shown below.
+A simple example is shown below to illustrate how a scheme can be created and displayed.
 
 
 <img
