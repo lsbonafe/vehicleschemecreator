@@ -1,39 +1,81 @@
 
-Generic json structure for vehicle scheme
----
+A renderer for generic JSON structures representing vehicle schemes—ranging from cars and buses to rockets or anything your imagination can create.
+
+The vehicle scheme data model is flexible and supports various vertical and horizontal configurations, with multiple decks and levels.
+
+A simple example is shown below.
 
 ```
 {
-"vehicleScheme": {
-"vehicleType": "string",        // Type of the vehicle (e.g., "bus", "train", "airplane")
-"decks": [
-{
-"baseDeckLevel": "int",     // The base level of this deck (e.g., 0, 1)
-"levels": [
-{
-"columns": "int",       // Number of columns in this level
-"rows": "int",          // Number of rows in this level
-"slots": [
-{
-"type": "string",   // Type of slot ("seat" or "element")
-"row": "int",       // The row index of the slot (0-based)
-"column": "int",    // The column index of the slot (0-based)
-// For type "seat"
-"seatInfo": "string or null",   // Information about the seat (e.g., "1A"), nullable
-"isTaken": "boolean",           // Whether the seat is occupied or not
-"category": "string or null",   // Category of the seat (e.g., "standard", "premium"), nullable
-"color": "string",              // Color in hex code (e.g., "#0000FF")
-"icon": "string",               // Icon representing the seat (e.g., emoji or URL)
+  "vehicleType": "car",
+  "decks": [
+    {
+      "baseDeckLevel": 0,
+      "levels": [
+        {
+          "columns": 3,
+          "rows": 2,
+          "slots": [
+            {
+              "type": "element",
+              "row": 0,
+              "column": 0,![Uploading ChatGPT Image May 28 2025 from Steve Jobs Reflexivo.png…]()
 
-                // For type "element"
-                "contentDescription": "string", // Description of the element (e.g., "Gap", "Stairs", "Wheel")
-                "icon": "string"                // Icon representing the element (e.g., emoji or URL)
-              }
-            ]
-          }
-        ]
-      }
-    ]
+              "contentDescription": "Wheel",
+              "icon": "⚙️"
+            },
+            {
+              "type": "element",
+              "row": 0,
+              "column": 1,
+              "contentDescription": "Gap",
+              "icon": "⬜"
+            },
+            {
+              "type": "seat",
+              "row": 0,
+              "column": 2,
+              "seatInfo": "Passenger",
+              "isTaken": false,
+              "category": "standard",
+              "color": "#000000",
+              "icon": "🪑"
+            },
+            {
+              "type": "seat",
+              "row": 1,
+              "column": 0,
+              "seatInfo": "Rear Left",
+              "isTaken": false,
+              "category": "standard",
+              "color": "#000000",
+              "icon": "🪑"
+            },
+            {
+              "type": "seat",
+              "row": 1,
+              "column": 1,
+              "seatInfo": "Rear Center",
+              "isTaken": false,
+              "category": "standard",
+              "color": "#000000",
+              "icon": "🪑"
+            },
+            {
+              "type": "seat",
+              "row": 1,
+              "column": 2,
+              "seatInfo": "Rear Right",
+              "isTaken": false,
+              "category": "standard",
+              "color": "#000000",
+              "icon": "🪑"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
-}
+
 ```
