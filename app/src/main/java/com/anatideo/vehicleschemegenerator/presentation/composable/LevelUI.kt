@@ -1,18 +1,15 @@
 package com.anatideo.vehicleschemegenerator.presentation.composable
 
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import com.anatideo.vehicleschemegenerator.presentation.composable.SlotUI
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.anatideo.vehicleschemegenerator.data.model.Level
@@ -51,19 +48,7 @@ fun LevelUI(
                 Row {
                     repeat(level.columns) { colIndex ->
                         val cellIcon = iconByPosition[rowIndex to colIndex].orEmpty()
-                        Box(
-                            modifier = Modifier
-                                .size(42.dp)
-                                .border(1.dp, MaterialTheme.colorScheme.onSurface.copy(alpha = 0.05f)),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Text(
-                                text = cellIcon,
-                                style = MaterialTheme.typography.bodyMedium.copy(
-                                    fontFamily = FontFamily.Monospace
-                                )
-                            )
-                        }
+                        SlotUI(slotIcon = cellIcon)
                     }
                 }
             }
