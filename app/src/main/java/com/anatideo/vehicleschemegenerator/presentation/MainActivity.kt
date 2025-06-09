@@ -5,13 +5,24 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.material3.TopAppBar
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import com.anatideo.vehicleschemegenerator.R
 import com.anatideo.vehicleschemegenerator.data.GetVehicleSchemeRepositoryImpl
 import com.anatideo.vehicleschemegenerator.data.datasource.mock.VehicleSchemeMockDataSourceImpl
 import com.anatideo.vehicleschemegenerator.data.model.VehicleScheme
 import com.anatideo.vehicleschemegenerator.core.ui.theme.AppTheme
 import com.anatideo.vehicleschemegenerator.data.model.Slot
 import com.anatideo.vehicleschemegenerator.presentation.composable.VehicleSchemeUI
+import com.anatideo.vehicleschemegenerator.presentation.composable.VehicleScheme3DUI
 import com.google.gson.GsonBuilder
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +33,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             AppTheme {
-                VehicleSchemeUI(vehicleScheme, modifier = Modifier.fillMaxSize())
+                VehicleSchemeApp(vehicleScheme)
             }
         }
     }
@@ -67,6 +78,35 @@ class MainActivity : ComponentActivity() {
             }
 
             Log.d("VehicleScheme", "") // Add a space between decks for clarity
+        }
+    }
+}
+
+@Composable
+private fun VehicleSchemeApp(vehicleScheme: VehicleScheme) {
+    var show3D = remember { mutableStateOf(false) }
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(id = R.string.app_name)) },
+                actions = {
+                    val label = if (show3D.value) R.string.view_2d else R.string.view_3d
+                    TextButton(onClick = { show3D.value = !show3D.value }) {
+                        Text(stringResource(id = label))
+                    }
+                }
+            )
+        }
+    ) { padding ->
+        val modifier = Modifier
+            .fillMaxSize()
+            .padding(padding)
+
+        if (show3D.value) {
+            VehicleScheme3DUI(vehicleScheme, modifier)
+        } else {
+            VehicleSchemeUI(vehicleScheme, modifier)
         }
     }
 }
