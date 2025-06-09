@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Vehicle Scheme Generator</string>
+    <string name="view_3d">3D View</string>
+    <string name="view_2d">2D View</string>
 </resources>
