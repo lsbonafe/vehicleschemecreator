@@ -1,4 +1,4 @@
-package com.anatideo.vehicleschemegenerator.presentation.composable
+package com.anatideo.vehicleschemegenerator.core.data.mock
 
 import com.anatideo.vehicleschemegenerator.data.model.Deck
 import com.anatideo.vehicleschemegenerator.data.model.Level

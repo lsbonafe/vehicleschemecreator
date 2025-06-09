@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.anatideo.vehicleschemegenerator.core.data.mock.VehicleSchemeMock
 import com.anatideo.vehicleschemegenerator.data.model.Level
 import com.anatideo.vehicleschemegenerator.data.model.Slot
 

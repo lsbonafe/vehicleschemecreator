@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.anatideo.vehicleschemegenerator.core.data.mock.VehicleSchemeMock
 import com.anatideo.vehicleschemegenerator.data.model.Deck
 
 @Composable

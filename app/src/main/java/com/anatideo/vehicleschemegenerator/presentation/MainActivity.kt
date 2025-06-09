@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import com.anatideo.vehicleschemegenerator.data.GetVehicleSchemeRepositoryImpl
 import com.anatideo.vehicleschemegenerator.data.datasource.mock.VehicleSchemeMockDataSourceImpl
 import com.anatideo.vehicleschemegenerator.data.model.VehicleScheme
-import com.anatideo.vehicleschemegenerator.presentation.theme.AppTheme
+import com.anatideo.vehicleschemegenerator.core.ui.theme.AppTheme
 import com.anatideo.vehicleschemegenerator.data.model.Slot
 import com.anatideo.vehicleschemegenerator.presentation.composable.VehicleSchemeUI
 import com.google.gson.GsonBuilder

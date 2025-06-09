@@ -1,4 +1,4 @@
-package com.anatideo.vehicleschemegenerator.presentation.theme
+package com.anatideo.vehicleschemegenerator.core.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
